@@ -1,0 +1,329 @@
+/* ==========================================================================
+   1. MAIN PAGE WRAPPER & POSITIONING FIX
+   ========================================================================== */
+.auth-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 110px 20px 40px 20px; /* Space added below the layout line */
+  background: radial-gradient(circle at top left, rgba(124, 58, 237, 0.2), transparent 45%),
+              radial-gradient(circle at bottom right, rgba(79, 70, 229, 0.2), transparent 45%),
+              #0f172a;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   2. NAVBAR PERFECT HORIZONTAL ALIGNMENT (CRITICAL LINE FIX)
+   ========================================================================== */
+.auth-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  
+  /* Elements ko ek line mein lane ke liye structure variables */
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  
+  padding: 0 40px;
+  background-color: #0f172a !important; /* Forces solid header dark look */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 99999 !important; /* Dynamic interface overlap protection */
+  box-sizing: border-box;
+}
+
+/* LOGO GROUP CONTAINER */
+.auth-navbar .logo {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 12px !important;
+  height: 100% !important;
+}
+
+/* ICON SIZING RULES */
+.auth-navbar .logo-icon {
+  width: 38px !important;
+  height: 38px !important;
+  min-width: 38px !important;
+  border-radius: 10px;
+  background: #7c3aed !important;
+  color: #ffffff !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-weight: 800 !important;
+  font-size: 18px !important;
+}
+
+/* LOGO TEXT ALIGNMENT */
+.auth-navbar .logo h2 {
+  color: #ffffff !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important; /* Line height alignment check */
+  display: inline-block !important;
+  white-space: nowrap !important;
+}
+
+/* RIGHT HAND SIDE NAVIGATION LINKS */
+.auth-navbar .nav-links {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 24px !important;
+}
+
+.auth-navbar .nav-links a {
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px !important;
+  transition: color 0.2s ease;
+}
+
+.auth-navbar .nav-links a:hover {
+  color: #a78bfa !important;
+}
+
+/* ==========================================================================
+   3. APP CONTAINER & INNER CARDS
+   ========================================================================== */
+.auth-container {
+  display: flex;
+  align-items: stretch;
+  gap: 30px;
+  background: #151d30;
+  border: 4px solid #1e293b;
+  border-radius: 40px;
+  padding: 30px;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+  max-width: 1040px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* LEFT ACCENT PURPLE CONTAINER */
+.left-auth {
+  flex: 1;
+  width: 100%;
+  min-height: 600px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.image-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 2;
+}
+
+.auth-image {
+  width: 250px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 25px 40px rgba(0, 0, 0, 0.3));
+  animation: floatImage 3s ease-in-out infinite;
+}
+
+.left-auth h2 {
+  color: #ffffff !important;
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.left-auth p {
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+/* RIGHT WHITE CARD FORM OVERRIDES */
+.right-auth {
+  flex: 1;
+  width: 100%;
+  min-height: 600px;
+  background: #ffffff !important;
+  border-radius: 30px;
+  padding: 30px 40px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.form-card {
+  width: 100%;
+}
+
+.logo-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.logo-center .logo-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #7c3aed;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.logo-text {
+  color: #0f172a !important;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.form-card h1 {
+  text-align: center;
+  margin-bottom: 5px;
+  color: #0f172a !important;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.form-card .subtitle {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* ==========================================================================
+   4. INPUT CONTROLS & VISIBILITY BALANCING
+   ========================================================================== */
+.form-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-card input,
+.form-card select {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 6px 0;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff !important;
+  color: #0f172a !important; /* Keeps selection details text readable */
+  outline: none;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-card select option {
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+.form-card input:focus,
+.form-card select:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.15);
+}
+
+/* BUTTON ACTION LAYER */
+.form-card button[type="submit"] {
+  width: 100%;
+  padding: 13px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.form-card button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(124, 58, 237, 0.3);
+}
+
+.bottom-text {
+  text-align: center;
+  margin-top: 15px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.bottom-text a {
+  color: #7c3aed !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* FEEDBACK STATES */
+.form-card .error {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.form-card .success {
+  background: #dcfce7;
+  color: #166534;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ANIMATIONS & RESPONSIVE BREAKPOINTS */
+@keyframes floatImage {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+@media (max-width: 950px) {
+  .auth-navbar {
+    padding: 0 20px;
+  }
+  .auth-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .left-auth,
+  .right-auth {
+    width: 100%;
+    max-width: 500px;
+    min-height: auto;
+  }
+}

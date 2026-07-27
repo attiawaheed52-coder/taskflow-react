@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   "tasks": [
     {
@@ -58,13 +59,98 @@
       "email": "attia.waheed52@gmail.com",
       "password": "attia123@",
       "id": "rP726E84MCE"
+=======
+{
+  "users": [
+    {
+      "name": "hina",
+      "email": "hina.waheed52@gmail.com",
+      "password": "hina123",
+      "role": "user",
+      "id": "vZEiz6lcYRI"
+>>>>>>> 05fae50261cf48dc1c8fdb954ba8f9331bbd4067
     },
     {
       "name": "attia",
       "email": "attia.waheed52@gmail.com",
       "password": "attia12",
+<<<<<<< HEAD
       "id": "gycGa-27XU0"
 >>>>>>> 84ae4432729ae9468673bd85d8e5f7a33c3773b5
+=======
+      "role": "admin",
+      "id": "fdhQ5YCjN54"
+    },
+    {
+      "name": "attia",
+      "email": "attia52@gmail.com",
+      "password": "attia1",
+      "role": "admin",
+      "id": "gPzuO99D5mI"
+    },
+    {
+      "name": "HINA",
+      "email": "HINA@gmail.com",
+      "password": "hina11",
+      "role": "admin",
+      "id": "xUuAJHfUCfQ"
+    },
+    {
+      "name": "anum",
+      "email": "anum.waheed@gmail.com",
+      "password": "anum22",
+      "role": "user",
+      "id": "ZomHiNusDbA"
+    },
+    {
+      "name": "alina",
+      "email": "alina@gmail.com",
+      "password": "alina22",
+      "role": "admin",
+      "id": "HuSLy-ttoco"
+    },
+    {
+      "name": "saba",
+      "email": "saba@gmail.com",
+      "password": "saba22",
+      "role": "user",
+      "id": "14cYCF2Fec4"
+    },
+    {
+      "name": "fatima",
+      "email": "fatima@gmail.com",
+      "password": "fatima33",
+      "role": "user",
+      "id": "kxVRCNUpX5o"
+    }
+  ],
+  "tasks": [
+    {
+      "title": "React",
+      "description": "make notes",
+      "dueDate": "2026-06-07",
+      "status": "Pending",
+      "priority": "High",
+      "email": "hina@gmail.com",
+      "id": "HeaLMaW-CIE"
+    },
+    {
+      "title": "learn angular",
+      "description": "make notes",
+      "dueDate": "2026-06-11",
+      "status": "Completed",
+      "priority": "High",
+      "email": "HINA@gmail.com",
+      "id": "7g151odiSOI"
+    },
+    {
+      "title": "react.js",
+      "description": "learn react",
+      "dueDate": "2026-06-11",
+      "status": "Completed",
+      "priority": "Medium",
+      "id": "EQLLGzM4_yE"
+>>>>>>> 05fae50261cf48dc1c8fdb954ba8f9331bbd4067
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

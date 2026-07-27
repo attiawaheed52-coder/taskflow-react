@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.admin-dashboard {
+  display: flex !important;
+  min-height: 100vh !important;
+  background: #0f172a !important;
+}
+
+.sidebar {
+  width: 280px;
+  background: #111827;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 30px 20px;
+}
+
+.logo h2 {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin-bottom: 12px;
+}
+
+.sidebar ul li a {
+  display: block;
+  text-decoration: none;
+  color: #cbd5e1;
+  padding: 14px 18px;
+  border-radius: 14px;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.sidebar ul li a.active {
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  color: white;
+}
+
+.main {
+  flex: 1 !important;
+  padding: 35px !important;
+}
+
+.topbar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 35px !important;
+}
+
+.topbar h1 {
+  color: white !important;
+  font-size: 34px !important;
+}
+
+.topbar button {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.stats-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 24px !important;
+  margin-bottom: 35px !important;
+}
+
+.stat-card {
+  padding: 35px 40px !important;
+  border-radius: 24px;
+  color: white;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.total { background: linear-gradient(135deg, #7c3aed, #6d28d9); }
+.pending { background: linear-gradient(135deg, #4f46e5, #4338ca); }
+
+.stat-card h2 { font-size: 48px !important; margin-bottom: 8px !important;}
+
+/* --- Fixed Edit Form Fields Stretching Issue --- */
+.edit-form-outer-wrapper {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: flex-start !important;
+  margin-bottom: 35px !important;
+}
+
+.edit-box {
+  background: rgba(30, 41, 59, 0.7) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  padding: 30px !important;
+  border-radius: 24px !important;
+  max-width: 550px !important; /* Prevents inputs from stretching wildly across screens */
+  width: 100% !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4) !important;
+}
+
+.edit-box h3 {
+  color: white !important;
+  font-size: 22px !important;
+  margin-bottom: 24px !important;
+}
+
+.edit-form-grid {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 18px !important;
+}
+
+.input-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+
+.input-group label {
+  color: #cbd5e1 !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+}
+
+.edit-box input,
+.edit-box textarea,
+.edit-box select {
+  width: 100% !important;
+  background: #0f172a !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding: 14px 16px !important;
+  border-radius: 12px !important;
+  color: white !important;
+  font-size: 15px !important;
+  outline: none !important;
+  transition: 0.3s;
+}
+
+.edit-box input:focus,
+.edit-box textarea:focus,
+.edit-box select:focus {
+  border-color: #7c3aed !important;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2) !important;
+}
+
+.edit-box textarea {
+  min-height: 110px !important;
+}
+
+.form-actions {
+  display: flex !important;
+  gap: 14px !important;
+  margin-top: 10px !important;
+}
+
+.form-actions button {
+  flex: 1 !important;
+  padding: 14px !important;
+  border: none !important;
+  border-radius: 12px !important;
+  cursor: pointer !important;
+  font-weight: 600 !important;
+}
+
+.form-actions .save-btn {
+  background: linear-gradient(135deg, #7c3aed, #4f46e5) !important;
+  color: white !important;
+}
+
+.form-actions .cancel-btn {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #cbd5e1 !important;
+}
+
+/* --- Fixed Black Email Colors Across Component Elements --- */
+.user-card-header {
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Force override to target any black email values rendering in headers or lists */
+.user-group-email, 
+.user-card-header h3,
+div[class*="email"],
+h3[class*="email"] {
+  color: #a5b4fc !important; /* Premium Glowing Indigo-White Color */
+  font-family: "JetBrains Mono", monospace !important;
+  font-size: 19px !important;
+  font-weight: 600 !important;
+}
+
+.mail-icon {
+  font-size: 20px;
+}
+
+/* --- Table Styles --- */
+.admin-overview-section {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 30px !important;
+}
+
+.table-card {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 24px;
+  padding: 30px !important;
+}
+
+.table-responsive { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th { color: #94a3b8; text-align: left; padding: 16px; font-size: 14px; }
+td { color: #e2e8f0; padding: 16px; border-bottom: 1px solid rgba(255, 255, 255, 0.04); }
+
+.task-title-cell { font-weight: 600; color: white; }
+.task-desc-cell { color: #94a3b8; }
+
+.priority-badge { padding: 5px 12px; border-radius: 8px; font-size: 12px; font-weight: 700; }
+.priority-high { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+.priority-low { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+
+.action-buttons-group { display: flex; gap: 12px; }
+.action-btn { background: transparent; border: none; cursor: pointer; font-size: 18px; }
+
+/* --- Modals and Toast --- */
+.custom-modal-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(15, 23, 42, 0.7); display: flex; align-items: center; justify-content: center;
+}
+.custom-modal-content { background: #111827; padding: 30px; border-radius: 20px; text-align: center; color: white;}
+.modal-btn-delete { background: #ef4444; color: white; border: none; padding: 10px 20px; border-radius: 8px; margin: 10px; cursor: pointer;}
+.modal-btn-cancel { background: #4b5563; color: white; border: none; padding: 10px 20px; border-radius: 8px; margin: 10px; cursor: pointer;}
