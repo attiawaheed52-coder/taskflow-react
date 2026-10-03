@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
 import loginImage from "../../../assets/login 1.jpg";
+import { API_BASE_URL, api } from "../../core/services/api";
 
 function Login() {
   const navigate = useNavigate();
@@ -24,8 +24,13 @@ function Login() {
       return;
     }
 
+    if (!API_BASE_URL) {
+      setError("API is not configured. Set VITE_API_URL in Vercel and redeploy.");
+      return;
+    }
+
     try {
-      const response = await axios.get("http://localhost:3000/users");
+      const response = await api.get("/users");
       const cleanEmail = form.email.trim().toLowerCase();
       const user = response.data.find(
         (u) => u.email?.trim().toLowerCase() === cleanEmail && u.password === form.password
@@ -59,7 +64,7 @@ function Login() {
       }, 1500);
     } catch (err) {
       console.error(err);
-      setError("❌ Network connection failed!");
+      setError("Cannot connect to the API. Check that it is running and VITE_API_URL is correct.");
     }
   };
  const logout = () => {

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./Forgot-Password.css";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
 import forgotImage from "../../../assets/forget.jpg";
+import { API_BASE_URL, api } from "../../core/services/api";
 
 function ForgotPassword() {
   const navigate = useNavigate();
@@ -23,10 +23,15 @@ function ForgotPassword() {
       return;
     }
 
+    if (!API_BASE_URL) {
+      setError("API is not configured. Set VITE_API_URL in Vercel and redeploy.");
+      return;
+    }
+
     try {
       // FIND USER
-      const response = await axios.get(
-        `http://localhost:5000/users?email=${email}`
+      const response = await api.get(
+        `/users?email=${encodeURIComponent(email.trim())}`
       );
 
       const users = response.data;
@@ -44,8 +49,8 @@ function ForgotPassword() {
       };
 
       // UPDATE PASSWORD
-      await axios.put(
-        `http://localhost:5000/users/${user.id}`,
+      await api.put(
+        `/users/${user.id}`,
         updatedUser
       );
 

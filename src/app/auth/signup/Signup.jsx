@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./Signup.css";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
 import signupImage from "../../../assets/signup.jpg";
+import { API_BASE_URL, api } from "../../core/services/api";
 
 function Signup() {
   const navigate = useNavigate();
@@ -47,10 +47,14 @@ function Signup() {
       return;
     }
 
+    if (!API_BASE_URL) {
+      setError("API is not configured. Set VITE_API_URL in Vercel and redeploy.");
+      return;
+    }
+
     try {
-      // 3. CHECK IF USER EXISTS (Updated to Port 5000)
-      const res = await axios.get(
-        `http://localhost:3000/users?email=${encodeURIComponent(form.email)}`
+      const res = await api.get(
+        `/users?email=${encodeURIComponent(form.email.trim())}`
       );
 
       if (res.data.length > 0) {
@@ -58,10 +62,9 @@ function Signup() {
         return;
       }
 
-      // 4. CREATE USER (Updated to Port 5000)
-      await axios.post("http://localhost:3000/users", {
+      await api.post("/users", {
         name: form.name,
-        email: form.email,
+        email: form.email.trim(),
         password: form.password,
         role: form.role,
       });
@@ -75,7 +78,8 @@ function Signup() {
       }, 2000);
 
     } catch (err) {
-      setError("❌ Server error. Try again!");
+      console.error(err);
+      setError("Cannot connect to the API. Check that it is running and VITE_API_URL is correct.");
     }
   };
 
