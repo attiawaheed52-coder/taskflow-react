@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./forgot-password.css";
+import "./Forgot-Password.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import forgotImage from "../../../assets/forget.jpg";

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import "./Dashboard.css";
+import "./dashboard.css";
 import { getTasks, updateTask } from "../../app/core/services/task.service";
 
 function Dashboard() {

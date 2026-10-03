@@ -2,8 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import AdminRoute from "../app/core/guards/AdminGuard";
 import AuthGuard from "../app/core/guards/AuthGuard";
 
-import Login from "../app/auth/Login/login";
-import Signup from "../app/auth/signup/signup";
+import Login from "../app/auth/login/Login";
+import Signup from "../app/auth/signup/Signup";
 import ForgotPassword from "../app/auth/forgot-password/Forgot-Password";
 
 import Dashboard from "../app/user/dashboard";
