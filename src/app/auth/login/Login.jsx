@@ -25,7 +25,7 @@ function Login() {
     }
 
     try {
-      const response = await axios.get("http://localhost:5000/users");
+      const response = await axios.get("http://localhost:3000/users");
       const cleanEmail = form.email.trim().toLowerCase();
       const user = response.data.find(
         (u) => u.email?.trim().toLowerCase() === cleanEmail && u.password === form.password

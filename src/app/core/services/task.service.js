@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/tasks";
+const API_URL = "http://localhost:3000/tasks";
 
 /* ===========================
    REFRESH SYSTEM (optional)

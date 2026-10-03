@@ -55,6 +55,13 @@
       "password": "fatima33",
       "role": "user",
       "id": "kxVRCNUpX5o"
+    },
+    {
+      "name": "laiba",
+      "email": "laiba@gmail.com",
+      "password": "laiba22",
+      "role": "user",
+      "id": "CAXifCLgTBM"
     }
   ],
   "tasks": [

@@ -32,7 +32,7 @@ function CreateTask() {
 
   useEffect(() => {
     const currentUser = JSON.parse(
-      localStorage.getItem("currentUser")
+      localStorage.getItem("user")
     );
 
     setUser(currentUser);
@@ -44,9 +44,9 @@ function CreateTask() {
 
     try {
 
-      const res = await getTasks();
+      const tasks = await getTasks();
 
-      const userTasks = res.data.filter(
+      const userTasks = tasks.filter(
         task => task.email === currentUser?.email
       );
 

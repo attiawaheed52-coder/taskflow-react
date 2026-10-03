@@ -50,7 +50,7 @@ function Signup() {
     try {
       // 3. CHECK IF USER EXISTS (Updated to Port 5000)
       const res = await axios.get(
-        `http://localhost:5000/users?email=${form.email}`
+        `http://localhost:3000/users?email=${encodeURIComponent(form.email)}`
       );
 
       if (res.data.length > 0) {
@@ -59,7 +59,7 @@ function Signup() {
       }
 
       // 4. CREATE USER (Updated to Port 5000)
-      await axios.post("http://localhost:5000/users", {
+      await axios.post("http://localhost:3000/users", {
         name: form.name,
         email: form.email,
         password: form.password,
