@@ -1,0 +1,73 @@
+<div class="auth-navbar">
+
+  <div class="logo">
+
+    <i class="bi bi-shield-lock-fill"></i>
+
+    AuthApp
+
+  </div>
+
+  <div class="nav-buttons">
+
+    <button (click)="logout()">
+      Logout
+    </button>
+
+  </div>
+
+</div>
+
+<div class="auth-wrapper">
+
+  <div class="profile-box">
+
+    <div class="profile-top">
+
+      <img
+        src="https://i.pravatar.cc/300"
+      >
+
+      <h1>Confirmed Login</h1>
+
+      <p>
+        You have successfully
+        logged in.
+      </p>
+
+    </div>
+
+    <div class="profile-content">
+
+      <h3>Account Details</h3>
+
+      <div class="info-box">
+
+        <h5>Name</h5>
+
+        <p>{{ user.name }}</p>
+
+      </div>
+
+      <div class="info-box">
+
+        <h5>Email</h5>
+
+        <p>{{ user.email }}</p>
+
+      </div>
+
+      <button
+        class="main-btn mt-4"
+        (click)="logout()"
+      >
+
+        LOGOUT
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,38 @@
+<div class="form-container">
+
+  <h2 class="form-heading">
+    ➕ Add New Task
+  </h2>
+
+  <div class="form-grid">
+
+    <div class="input-group">
+
+      <label>Task Title</label>
+
+      <input
+        type="text"
+        [(ngModel)]="task.title"
+        placeholder="Enter task title"
+      >
+
+    </div>
+
+    <div class="input-group">
+
+      <label>Task Description</label>
+
+      <textarea
+        [(ngModel)]="task.description"
+        placeholder="Enter task description">
+      </textarea>
+
+    </div>
+
+  </div>
+
+  <button (click)="submitForm()">
+    💾 Save Task
+  </button>
+
+</div>

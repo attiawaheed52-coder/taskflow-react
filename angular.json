@@ -1,0 +1,102 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "cli": {
+    "packageManager": "npm",
+<<<<<<< HEAD
+    "analytics": "bf3b8ef6-f95e-4a77-b287-0cfe0e1d6810"
+  },
+  "newProjectRoot": "projects",
+  "projects": {
+    "task-curd-app": {
+=======
+    "analytics": "4c3f285e-eee8-4997-8709-82ff389cdf76"
+  },
+  "newProjectRoot": "projects",
+  "projects": {
+    "auth-app": {
+>>>>>>> 84ae4432729ae9468673bd85d8e5f7a33c3773b5
+      "projectType": "application",
+      "schematics": {},
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "src/main.ts",
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": [
+<<<<<<< HEAD
+=======
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+>>>>>>> 84ae4432729ae9468673bd85d8e5f7a33c3773b5
+              "src/styles.css"
+            ],
+            "server": "src/main.server.ts",
+            "outputMode": "server",
+            "security": {
+              "allowedHosts": []
+            },
+            "ssr": {
+              "entry": "src/server.ts"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "configurations": {
+            "production": {
+<<<<<<< HEAD
+              "buildTarget": "task-curd-app:build:production"
+            },
+            "development": {
+              "buildTarget": "task-curd-app:build:development"
+=======
+              "buildTarget": "auth-app:build:production"
+            },
+            "development": {
+              "buildTarget": "auth-app:build:development"
+>>>>>>> 84ae4432729ae9468673bd85d8e5f7a33c3773b5
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test"
+        }
+      }
+    }
+  }
+}

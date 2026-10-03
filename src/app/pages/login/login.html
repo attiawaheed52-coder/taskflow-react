@@ -1,0 +1,161 @@
+<div class="auth-navbar">
+
+  <div class="logo">
+
+    <i class="bi bi-shield-lock-fill"></i>
+
+    AuthApp
+
+  </div>
+
+  <div class="nav-buttons">
+
+    <button routerLink="/signup">
+      Sign In
+    </button>
+
+    <button routerLink="/login">
+      Login
+    </button>
+
+  </div>
+
+</div>
+
+<div class="auth-wrapper">
+
+  <div class="auth-container">
+
+    <!-- LEFT -->
+
+    <div class="left-side">
+
+      <div class="form-card">
+
+        <div class="text-center mb-4">
+
+          <i
+            class="bi bi-lock-fill"
+            style="
+              font-size:50px;
+              color:#5b5bff;
+            "
+          ></i>
+
+        </div>
+
+        <h1>Welcome Back!</h1>
+
+        <p>
+          Login to your account
+          to continue.
+        </p>
+
+        <form
+          [formGroup]="loginForm"
+          (ngSubmit)="login()"
+        >
+
+          <!-- EMAIL -->
+
+          <div class="input-group">
+
+            <label>Email Address</label>
+
+            <input
+              type="email"
+              formControlName="email"
+              placeholder="Enter your email"
+            >
+
+          </div>
+
+          <!-- PASSWORD -->
+
+          <div class="input-group">
+
+            <label>Password</label>
+
+            <input
+              type="password"
+              formControlName="password"
+              placeholder="Enter your password"
+            >
+
+          </div>
+
+          <div class="extra-links">
+
+            <label>
+
+              <input
+                type="checkbox"
+                formControlName="remember"
+              >
+
+              Remember Me
+
+            </label>
+
+            <a routerLink="/forgot-password">
+
+              Forgot Password?
+
+            </a>
+
+          </div>
+
+          <button
+            class="main-btn mt-4"
+            type="submit"
+          >
+
+            LOGIN
+
+          </button>
+
+        </form>
+
+        <div class="text-center mt-4">
+
+          Don't have an account?
+
+          <a
+            routerLink="/signup"
+            style="
+              text-decoration:none;
+              font-weight:bold;
+            "
+          >
+
+            Sign In
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+
+    <div class="right-side">
+
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/6195/6195699.png"
+      >
+
+      <h2>Welcome Back!</h2>
+
+      <p>
+        Login to access your
+        account and manage
+        your profile.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
