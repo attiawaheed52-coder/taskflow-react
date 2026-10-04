@@ -1,85 +1,11 @@
-<<<<<<< HEAD
-
-  "tasks": [
-    {
-      "title": "angular  updated",
-      "description": "learn updated",
-      "id": "oIl3g_6vKck"
-    },
-    {
-      "title": "",
-      "description": "",
-      "id": "YASu5LGh-aU"
-=======
-  "users": [
-    {
-      "name": "attia waheed",
-      "email": "attia.waheed52@gmail.com",
-      "password": "attia123@",
-      "id": "_TjIVYLNX-w"
-    },
-    {
-      "name": "Attia waheed",
-      "email": "attia.waheed52@gmail.com",
-      "password": "attia123$",
-      "id": "YKt1M87WOZU"
-    },
-    {
-      "name": "hina",
-      "email": "hina52@gamil.com",
-      "password": "hina 1234",
-      "id": "WX28yOVt3yQ"
-    },
-    {
-      "name": "hina",
-      "email": "hina52@gamil.com",
-      "password": "hina 1234",
-      "id": "9SbtbojxMhI"
-    },
-    {
-      "name": "hina",
-      "email": "hina52@gmail.com",
-      "password": "hina 1234",
-      "id": "BkxWO3AXi3o"
-    },
-    {
-      "name": "anum",
-      "email": "anum.waheed52@gmail.com",
-      "password": "anum123@",
-      "id": "_MM-v2uQNRk"
-    },
-    {
-      "name": "Attia waheed",
-      "email": "attia.waheed52@gmail.com",
-      "password": "attia123@",
-      "id": "XZKb8sIQNwk"
-    },
-    {
-      "name": "Attia waheed",
-      "email": "attia.waheed52@gmail.com",
-      "password": "attia123@",
-      "id": "rP726E84MCE"
-=======
 {
   "users": [
-    {
-      "name": "hina",
-      "email": "hina.waheed52@gmail.com",
-      "password": "hina123",
-      "role": "user",
-      "id": "vZEiz6lcYRI"
->>>>>>> 05fae50261cf48dc1c8fdb954ba8f9331bbd4067
-    },
     {
       "name": "attia",
       "email": "attia.waheed52@gmail.com",
       "password": "attia12",
-<<<<<<< HEAD
-      "id": "gycGa-27XU0"
->>>>>>> 84ae4432729ae9468673bd85d8e5f7a33c3773b5
-=======
       "role": "admin",
-      "id": "fdhQ5YCjN54"
+      "id": "gycGa-27XU0"
     },
     {
       "name": "attia",
@@ -133,6 +59,11 @@
   ],
   "tasks": [
     {
+      "title": "angular updated",
+      "description": "learn updated",
+      "id": "oIl3g_6vKck"
+    },
+    {
       "title": "React",
       "description": "make notes",
       "dueDate": "2026-06-07",
@@ -157,7 +88,6 @@
       "status": "Completed",
       "priority": "Medium",
       "id": "EQLLGzM4_yE"
->>>>>>> 05fae50261cf48dc1c8fdb954ba8f9331bbd4067
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
