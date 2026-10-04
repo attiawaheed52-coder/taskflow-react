@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
 # Compiled output
@@ -39,32 +38,12 @@ testem.log
 /typings
 __screenshots__/
 
+# Local environment variables
+.env
+.env.*
+!.env.example
+
 # System files
 .DS_Store
 Thumbs.db
-=======
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
->>>>>>> 05fae50261cf48dc1c8fdb954ba8f9331bbd4067
 config.bat
